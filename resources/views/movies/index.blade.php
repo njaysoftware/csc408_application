@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('Layout.main')
 
 @section('header')
     <!-- Datatables Styles -->
