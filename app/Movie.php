@@ -19,6 +19,7 @@ class Movie extends Model
     public function rentors()
     {
         //defines the relationship between movies and the user table
-        return $this->belongsToMany('App\User', 'rentals');
+        return $this->belongsToMany('App\User', 'rentals')
+            ->withPivot(['movie_id', 'user_id', 'rent_date', 'return_date', 'disc_type']);
     }
 }
